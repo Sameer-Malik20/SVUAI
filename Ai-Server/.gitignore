@@ -1,0 +1,68 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+env/
+venv/
+.venv/
+Env/
+ENV/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints (if any)
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Environment variables
+.env
+*.env
+
+# SQLite/DB files
+*.sqlite3
+*.db
+
+# VSCode settings (optional)
+.vscode/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Pip dependency files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Model checkpoints, output files (commonly generated in AI/ML projects)
+checkpoints/
+outputs/
+runs/
+*.ckpt
+*.pth
+*.pt
+*.h5
+
+# Data (if any, avoid uploading datasets)
+data/
+datasets/
+*.csv
+*.tsv
+*.json
+
+# Other
+*.bak
+*.swp
