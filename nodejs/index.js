@@ -8,12 +8,12 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ✅ Load university data once
+// Load university data once
 const coursesData = JSON.parse(
   fs.readFileSync(path.join(__dirname, "/courses_info.json"), "utf-8")
 );
 
-// 🔁 Convert to plain context string
+// Convert to plain context string
 const universityContext = coursesData
   .map((item) =>
     Object.entries(item)
@@ -22,7 +22,7 @@ const universityContext = coursesData
   )
   .join("\n");
 
-// 🔌 Create bot
+// Create bot
 venom
   .create({
     session: "svu-ai-bot",
@@ -32,7 +32,7 @@ venom
       "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   })
   .then((client) => startBot(client))
-  .catch((err) => console.error("❌ Venom Init Error:", err));
+  .catch((err) => console.error("Venom Init Error:", err));
 
 function startBot(client) {
   client.onMessage(async (message) => {
@@ -45,7 +45,7 @@ UNIVERSITY DATA:
 ${universityContext}
 
 USER QUESTION: ${question}
-ANSWER:`; // 👈 Gemini को clear instruction
+ANSWER:`; 
 
       try {
         const response = await axios.post(
@@ -63,7 +63,7 @@ ANSWER:`; // 👈 Gemini को clear instruction
         client.sendText(message.from, reply);
       } catch (error) {
         console.error("Gemini Error:", error.response?.data || error.message);
-        client.sendText(message.from, "❌ Gemini API error.");
+        client.sendText(message.from, " Gemini API error.");
       }
     }
   });
