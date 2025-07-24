@@ -1,7 +1,3 @@
-Certainly! Here's a detailed README in English based on the information you provided:
-
----
-
 # 🤖 SVUAI - Smart Virtual University AI Assistant
 
 **SVUAI** is a comprehensive, AI-powered virtual assistant designed specifically for university students. It helps users get quick answers, extract data from documents, and interact seamlessly via WhatsApp. The backend is built using **Node.js**, while AI functionalities are powered by **Python (Flask)** with robust libraries like **sentence-transformers**, **torch**, and **pandas**. The project also features an integrated **WhatsApp bot** developed using the **Alias** framework, enabling smooth AI interactions over chat.
